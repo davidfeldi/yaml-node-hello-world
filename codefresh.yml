@@ -4,7 +4,7 @@ steps:
   build-prj:
     type: build
     description: e2e use case
-    image-name: codefreshio/yaml-node-4
+    image-name: codefreshio/yaml-node-6
     dockerfile: Dockerfile
     tag: latest
 
@@ -12,3 +12,11 @@ steps:
     type: push
     candidate: ${{build-prj}}
     tag: latest
+
+  deploy-aws:
+    type: deploy
+    image: codefreshio/yaml-node-6
+    candidate: ${{push-dockerhub}}
+    environment:
+      - AWS_ID=${{AWS_ID}}
+      - AWS_SECRET=${{AWS_SECRET}}
