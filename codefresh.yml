@@ -1,10 +1,15 @@
 version: '1.0'
 
 steps:
+  unit-test-jim:
+    image: node:latest
+    commands:
+      - echo $TEST
+
   build-prj:
     type: build
     description: e2e use case
-    image-name: codefreshio/yaml-node-7
+    image-name: codefreshio/yaml-node-8
     dockerfile: Dockerfile
     tag: latest
     environment:
