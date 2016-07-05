@@ -1,12 +1,12 @@
 version: '1.0'
 
 steps:
-   unit-test-prj:
+unit-test-prj:
     image: node:latest
     commands:
       - start.sh
 
-   build-prj:
+build-prj:
     type: build
     description: e2e use case
     image-name: codefreshio/yaml-node-9
