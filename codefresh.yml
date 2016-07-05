@@ -9,9 +9,7 @@ steps:
     tag: latest
 
   deploy-aws:
-    type: deploy
-    image: codefreshio/yaml-node-6
+    image: tutum/curl
     candidate: ${{build-prj}}
-    environment:
-      - AWS_ID=${{AWS_ID}}
-      - AWS_SECRET=${{AWS_SECRET}}
+    commands:
+      - command
