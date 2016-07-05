@@ -8,15 +8,10 @@ steps:
     dockerfile: Dockerfile
     tag: latest
 
-  push-dockerhub:
-    type: push
-    candidate: ${{build-prj}}
-    tag: latest
-
   deploy-aws:
     type: deploy
     image: codefreshio/yaml-node-6
-    candidate: ${{push-dockerhub}}
+    candidate: ${{build-prj}}
     environment:
       - AWS_ID=${{AWS_ID}}
       - AWS_SECRET=${{AWS_SECRET}}
