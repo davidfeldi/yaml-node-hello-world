@@ -4,13 +4,11 @@ steps:
   unit-test-prj:
     image: node:latest
     commands:
-      - echo $TEST
+      - start.sh
 
   build-prj:
     type: build
     description: e2e use case
-    image-name: codefreshio/yaml-node-8
+    image-name: codefreshio/yaml-node-9
     dockerfile: Dockerfile
     tag: latest
-    environment:
-        - TEST=1234
