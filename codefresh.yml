@@ -8,7 +8,10 @@ steps:
     dockerfile: Dockerfile
     tag: latest
 
-  push-dockerhub:
+  push-prj:
     type: push
     candidate: ${{build-prj}}
     tag: latest
+    credentials:
+      username: ${{USERNAME_DOCKERHUB}}
+      password: ${{PASSWORD_DOCKERHUB}}
