@@ -4,6 +4,6 @@ E2E use cases - YAML
 Test case
 
 ```
-Summary: Build a service without dockerfile
-Expected result: Step build-jim should be failed.
+Summary:  Build a service with dockerfile and parameter no-cache
+Expected result: Image should be created. Step build-jim should be passed.
 ```

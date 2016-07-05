@@ -4,6 +4,7 @@ steps:
   build-prj:
     type: build
     description: e2e use case
-    image-name: codefreshio/yaml-node-2
+    image-name: codefreshio/yaml-node-3
     dockerfile: Dockerfile
     tag: latest
+    build-arguments: --no-cache
