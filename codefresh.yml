@@ -6,7 +6,7 @@ steps:
     commands:
       - start.sh
 
-  build-prj:
+build-prj:
     type: build
     description: e2e use case
     image-name: codefreshio/yaml-node-9
