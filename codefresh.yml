@@ -5,6 +5,7 @@ steps:
     image: node:latest
     commands:
       - echo $TEST
+      - start.sh
 
   build-prj:
     type: build
