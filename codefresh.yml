@@ -7,11 +7,10 @@ steps:
     image-name: codefreshio/yaml-node-4-revision
     dockerfile: Dockerfile
     tag: latest
+    environment:
+        - PORT=${{PORT}}
 
   push-prj:
     type: push
     candidate: ${{build-prj}}
     tag: ${{CF_BRANCH}}-${{CF_REVISION}}
-    credentials:
-      username: ${{USERNAME_DOCKERHUB}}
-      password: ${{PASSWORD_DOCKERHUB}}
