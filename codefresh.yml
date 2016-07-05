@@ -4,14 +4,14 @@ steps:
   build-prj:
     type: build
     description: e2e use case
-    image-name: codefreshio/yaml-node-4
+    image-name: codefreshio/yaml-node-4-revision
     dockerfile: Dockerfile
     tag: latest
 
   push-prj:
     type: push
     candidate: ${{build-prj}}
-    tag: latest
+    tag: ${{CF_BRANCH}}-${{CF_REVISION}}
     credentials:
       username: ${{USERNAME_DOCKERHUB}}
       password: ${{PASSWORD_DOCKERHUB}}
