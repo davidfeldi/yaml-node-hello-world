@@ -1,9 +1,9 @@
 version: '1.0'
 
 steps:
-    build-prj:
-      type: build
-      description: e2e use case
-      image-name: codefreshio/yaml-node-9
-      dockerfile: Dockerfile
-      tag: latest
+	build-prj:
+	      type: build
+	      description: e2e use case
+	      image-name: codefreshio/yaml-node-9
+	      dockerfile: Dockerfile
+	      tag: latest
