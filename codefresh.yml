@@ -9,3 +9,8 @@ steps:
     tag: latest
     environment:
         - TEST=1234
+
+  env-step:
+      image: codefreshio/yaml-node-7
+      commands:
+        - echo $TEST
