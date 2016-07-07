@@ -7,4 +7,5 @@ steps:
     image-name: codefreshio/yaml-node-3
     dockerfile: Dockerfile
     tag: latest
-    build-arguments: --no-cache
+    build-arguments:
+      - argument=TEST
