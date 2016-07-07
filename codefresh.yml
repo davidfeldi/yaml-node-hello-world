@@ -8,9 +8,11 @@ steps:
     dockerfile: Dockerfile
     tag: latest
     environment:
-        - TEST=1234
+        - TEST=sccess
 
   env-step:
       image: codefreshio/yaml-node-7
+      environment:
+        - TEST=12345
       commands:
         - echo $TEST
