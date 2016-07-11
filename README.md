@@ -26,9 +26,7 @@ Body:
 {
  "revision": "test-case-4",
  "variables":{
-  "DOCKERHUB_USER":"username",
-  "USERNAME_DOCKERHUB": "username from dockerhub",
-  "PASSWORD_DOCKERHUB": "password from dockerhub"
+  "DOCKERHUB_USER":"username"
  }
 }
 ```

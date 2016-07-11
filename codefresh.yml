@@ -12,6 +12,3 @@ steps:
     type: push
     candidate: ${{build-prj}}
     tag: ${{CF_BRANCH}}-${{CF_REVISION}}
-    credentials:
-      - username: ${{USERNAME_DOCKERHUB}}
-      - password: ${{PASSWORD_DOCKERHUB}}
