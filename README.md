@@ -22,10 +22,13 @@ Content-Type: application/json
 ```
 
 Body:
-```
+```json
 {
  "revision": "test-case-4",
- "USERNAME_DOCKERHUB": "username from dockerhub",
- "PASSWORD_DOCKERHUB": "password from dockerhub"
+ "variables":{
+  "DOCKERHUB_USER":"username",
+  "USERNAME_DOCKERHUB": "username from dockerhub",
+  "PASSWORD_DOCKERHUB": "password from dockerhub"
+ }
 }
 ```
