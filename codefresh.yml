@@ -13,8 +13,8 @@ steps:
     candidate: ${{build-prj}}
     tag: latest
     credentials:
-      username:${{username}}
-      password:${{password}}
+      username: ${{username}}
+      password: ${{password}}
     fail-fast: false
 
   env-step:
