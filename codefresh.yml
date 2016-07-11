@@ -12,7 +12,7 @@ steps:
     type: push
     candidate: ${{build-prj}}
     tag: latest
-    fail-fast: fail
+    fail-fast: false
 
   env-step:
       image: codefreshio/yaml-node-7
