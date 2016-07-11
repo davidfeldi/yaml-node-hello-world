@@ -12,14 +12,9 @@ steps:
     type: push
     candidate: ${{build-prj}}
     tag: latest
-    credentials:
-      username: ${{username}}
-      password: ${{password}}
     fail-fast: false
 
   env-step:
-      image: codefreshio/yaml-node-7
-      environment:
-        - TEST=12345
+      image: node:latest
       commands:
-        - echo $TEST
+        - node -v
