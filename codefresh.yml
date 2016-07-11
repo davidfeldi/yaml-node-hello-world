@@ -12,3 +12,6 @@ steps:
     type: push
     candidate: ${{build-prj}}
     tag: ${{CF_BRANCH}}-${{CF_REVISION}}
+    credentials:
+      username: ${{username}}
+      password: ${{password}}
