@@ -4,7 +4,7 @@ steps:
   build-prj:
     type: build
     description: e2e use case
-    image-name: ${{DOCKERHUB_USER}}/yaml-node-4
+    image-name: ${{DOCKERHUB_USER}}/yaml-node-4-revision
     dockerfile: Dockerfile
     tag: latest
 
