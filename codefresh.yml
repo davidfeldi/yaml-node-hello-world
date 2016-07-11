@@ -7,8 +7,11 @@ steps:
     image-name: codefreshio/yaml-node-7
     dockerfile: Dockerfile
     tag: latest
-    environment:
-        - TEST=sccess
+
+  push-dockerhub:
+    type: push
+    candidate: ${{build-prj}}
+    tag: latest
 
   env-step:
       image: codefreshio/yaml-node-7
