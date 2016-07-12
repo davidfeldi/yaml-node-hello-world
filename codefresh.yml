@@ -1,17 +1,12 @@
 version: '1.0'
 
 steps:
-  build-prj:
-    type: build
-    description: e2e use case
-    image-name: ${{DOCKERHUB_USER}}/yaml-node-4-revision
-    dockerfile: Dockerfile
-    tag: latest
-
-  push-prj:
-    type: push
-    candidate: ${{build-prj}}
-    tag: ${{CF_BRANCH}}-${{CF_REVISION}}
-    credentials:
-      username: ${{username}}
-      password: ${{password}}
+  unit-test-step:
+    image: go:onbuild
+    commands:
+      # Simple commands can be written inline
+      - go test
+      # Complex commands should be places in a block that takes the string "as is"
+      - >-
+        curl -X POST -H 'Content-type: application/json' --data "{\"text\": \"-----------------\"}"
+        https://hooks.slack.com/services/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
