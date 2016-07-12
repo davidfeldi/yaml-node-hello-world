@@ -2,10 +2,10 @@ version: '1.0'
 
 steps:
   unit-test-step:
-    image: go:onbuild
+    image: tutum/curl:latest
     commands:
       # Simple commands can be written inline
-      - go test
+      - curl --version
       # Complex commands should be places in a block that takes the string "as is"
       - >-
         curl -X POST -H 'Content-type: application/json' --data "{\"text\": \"-----------------\"}"
