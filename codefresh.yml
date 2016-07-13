@@ -7,6 +7,8 @@ steps:
     image-name: codefreshio/yaml-node-7
     dockerfile: Dockerfile
     tag: latest
+    environment:
+      - TEST=test
 
   env-step:
       image: node:latest
