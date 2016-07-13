@@ -1,17 +1,8 @@
 version: '1.0'
 
 steps:
-  build-prj:
-    type: build
-    description: e2e use case
-    image-name: codefreshio/yaml-node-7
-    dockerfile: Dockerfile
-    tag: latest
-    environment:
-      - TEST=test
-
   env-step:
-      image: node:latest
-      commands:
-        - node -v
-        - echo $TEST
+    image: node:latest
+    commands:
+      - node -v
+      - echo $TEST

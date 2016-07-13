@@ -3,7 +3,6 @@ E2E use cases - YAML
 
 Test case
 ```
-Summary: Build a service with environment variables
-Expected result: Image should be created. On pipeline in
-the “Environment variables” should be all variables which was specified in the yaml environment. Step build-jim should be passed.
+Summary: Build service with environment variables from pipeline
+Expected result: Step unit-test-step should be passed and in the log should be displayed value of env variable TEST
 ```
