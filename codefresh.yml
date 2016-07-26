@@ -14,6 +14,6 @@ steps:
       image: node:latest
       commands:
         - node -v
-        - echo env:$TEST
-        - echo env:$TEST1
-        - echo env:$TEST2
+        - echo env:${{TEST}}
+        - echo env:${{TEST1}}
+        - echo env:${{TEST2}}
