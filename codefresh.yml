@@ -13,7 +13,7 @@ steps:
   env-step:
       image: node:latest
       environment:
-        - TEST: ${{TEST}}
+        - TEST=${{TEST}}
       commands:
         - node -v
         - echo env:$TEST
