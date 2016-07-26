@@ -12,8 +12,10 @@ steps:
 
   env-step:
       image: node:latest
+      environment:
+        - TEST: ${{TEST}}
       commands:
         - node -v
-        - echo env:${{TEST}}
+        - echo env:$TEST
         - echo env:${{TEST1}}
         - echo env:${{TEST2}}
