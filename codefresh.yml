@@ -14,4 +14,4 @@ steps:
       image: node:latest
       commands:
         - node -v
-        - echo $TEST
+        - echo env:$TEST
