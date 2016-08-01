@@ -5,20 +5,14 @@ steps:
    type: build
    image-name: codefreshio/yaml-node-33
    dockerfile: Dockerfile
-   tag: latest
 
- push-to-dockerhub:
-   type: push
-   candidate: ${{build-step-name}}
-   tag: latest
+# push-to-dockerhub:
+#   type: push
+#   candidate: ${{build-step-name}}
+#   tag: latest
 
  composition-step:
    type: composition
-   composition:
-    test-yaml:
-      image: 'codefreshio/yaml-node-33'
-   composition-candidates:
-    test-yaml:
-      image: 'codefreshio/yaml-node-33'
+   composition: yaml-composition
    composition-variables:
      - IMAGE_NAME=yaml-node-33
