@@ -14,8 +14,11 @@ steps:
 
  composition-step:
    type: composition
+   composition:
+    test-yaml:
+      image: 'codefreshio/yaml-node-33'
    composition-candidates:
-     docker-spring-boot:
-       image: 'codefreshio/yaml-node-33'
+    test-yaml:
+      image: 'codefreshio/yaml-node-33'
    composition-variables:
      - IMAGE_NAME=yaml-node-33
