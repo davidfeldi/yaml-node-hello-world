@@ -1,21 +1,21 @@
 version: '1.0'
 
 steps:
-  build-prj:
-    type: build
-    description: e2e use case
-    image-name: codefreshio/yaml-node-7
-    dockerfile: Dockerfile
-    tag: latest
-    environment:
-      - TEST=test
+ build-step-name:
+   type: build
+   image-name: codefreshio/yaml-node-32
+   dockerfile: Dockerfile
+   tag: latest
 
-  env-step:
-      image: node:latest
-      environment:
-        - TEST=${{TEST}}
-      commands:
-        - node -v
-        - echo env:$TEST
-        - echo env:${{TEST1}}
-        - echo env:${{TEST2}}
+ push-to-dockerhub:
+   type: push
+   candidate: ${{build-step-name}}
+   tag: latest
+
+ composition-step:
+   type: composition
+   composition-candidates:
+     docker-spring-boot:
+       image: 'codefreshio/yaml-node-32'
+   composition-variables:
+     - IMAGE_NAME=yaml-node-32
