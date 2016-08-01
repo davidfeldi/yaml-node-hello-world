@@ -3,7 +3,7 @@ version: '1.0'
 steps:
  build-step-name:
    type: build
-   image-name: codefreshio/yaml-node-32
+   image-name: codefreshio/yaml-node-33
    dockerfile: Dockerfile
    tag: latest
 
@@ -16,6 +16,6 @@ steps:
    type: composition
    composition-candidates:
      docker-spring-boot:
-       image: 'codefreshio/yaml-node-32'
+       image: 'codefreshio/yaml-node-33'
    composition-variables:
-     - IMAGE_NAME=yaml-node-32
+     - IMAGE_NAME=yaml-node-33
