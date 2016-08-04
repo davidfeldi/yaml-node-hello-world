@@ -14,8 +14,8 @@ steps:
  composition-step:
    type: composition
    composition: yaml-composition
-   composition-candidates:
-    test-yaml:
-      image: 'codefreshio/yaml-node-33:latest'
+#   composition-candidates:
+#    test-yaml:
+#      image: 'codefreshio/yaml-node-33:latest'
    composition-variables:
      - IMAGE_NAME=yaml-node-33
