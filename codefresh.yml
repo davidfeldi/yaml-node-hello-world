@@ -16,7 +16,7 @@ steps:
    composition: yaml-composition
    composition-candidates:
     test-yaml:
-      image: 'codefreshio/yaml-node-33:latest'
+      image: 'codefreshio/${{IMAGE_NAME}}:latest'
       ports:
         - 3000
    composition-variables:
