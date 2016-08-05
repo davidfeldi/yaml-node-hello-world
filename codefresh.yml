@@ -1,23 +1,23 @@
 version: '1.0'
 
 steps:
- build-step-name:
-   type: build
-   image-name: codefreshio/yaml-node-33
-   dockerfile: Dockerfile
+  clone-step:
+    type: git-clone
+    repo:
 
- push-to-dockerhub:
-   type: push
-   candidate: ${{build-step-name}}
-   tag: latest
-
- composition-step:
+  composition-step:
    type: composition
-   composition: yaml-composition
+   composition: git-composition
+   working-directory: ${{clone-step}}
    composition-candidates:
-    test-yaml:
-      image: 'codefreshio/${{IMAGE_NAME}}:latest'
-      ports:
-        - 3000
+    git-image:
+      image: 'codefreshio/git-image:latest'
+      commands:
+        - git remote set-url origin $STASH_URL
+        - git remote -v
+        - git add *
+        - git status
+        - git commit -am "export repo"
+        - GIT_SSL_NO_VERIFY=true git push origin master
    composition-variables:
-     - IMAGE_NAME=yaml-node-33
+     - STASH_URL=${{STASH_URL}}
