@@ -6,10 +6,10 @@ steps:
    image-name: codefreshio/yaml-node-33
    dockerfile: Dockerfile
 
-# push-to-dockerhub:
-#   type: push
-#   candidate: ${{build-step-name}}
-#   tag: latest
+ push-to-dockerhub:
+   type: push
+   candidate: ${{build-step-name}}
+   tag: latest
 
  composition-step:
    type: composition
