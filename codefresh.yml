@@ -10,6 +10,6 @@ steps:
     composition: test-compo
     working-directory: ${{clone-step}}
     composition-candidates:
-      git-image:
-        image: 'node:latest'
+      small:
+        image: 'davidfeldi/small:test1'
         command: echo \"Waiting for DB\"
