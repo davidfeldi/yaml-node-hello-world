@@ -11,5 +11,5 @@ steps:
     working-directory: ${{clone-step}}
     composition-candidates:
       small:
-        image: 'davidfeldi/small:test1'
+        image: ${{clone-step}}
         command: echo \"Waiting for DB\"
