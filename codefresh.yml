@@ -8,7 +8,6 @@ steps:
   composition-step:
     type: composition
     composition: test-compo
-    working-directory: ${{clone-step}}
     composition-candidates:
       small:
         image: ${{clone-step}}
