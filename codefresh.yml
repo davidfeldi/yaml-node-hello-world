@@ -4,11 +4,17 @@ steps:
   clone-step:
     type: git-clone
     repo: https://github.com/codefresh-io/yaml-node-hello-world.git
+  
+  build-step:
+    type: build
+    image-name: davidfeldi/yaml-node-hello
+    dockerfile: Dockerfile
+    tag: latest  
     
   composition-step:
     type: composition
     composition: test-compo
     composition-candidates:
       small:
-        image: ${{clone-step}}
+        image: ${{build-step}}
         command: echo \"Waiting for DB\"
