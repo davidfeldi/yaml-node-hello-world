@@ -8,13 +8,16 @@ steps:
     dockerfile: Dockerfile
     tag: latest
 
-  push-dockerhub:
-    type: push
-    candidate: ${{build-prj}}
-    tag: latest
-    fail-fast: false
+#  push-dockerhub:
+#    type: push
+#    candidate: ${{build-prj}}
+#    tag: latest
+#    fail-fast: false
 
   env-step:
       image: ${{build-prj}}
       commands:
-        - node -v
+        - hostname
+        - ls -l 
+        - pwd
+        - whoami
