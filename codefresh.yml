@@ -16,5 +16,5 @@ steps:
     composition: test-compo
     composition-candidates:
       small:
-        image: ${{build-step}}
+        image: node
         command: echo \"Waiting for DB\"
