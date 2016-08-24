@@ -2,7 +2,7 @@ version: '1.0'
 
 steps:
   env-step:
-    image: node:latest
+    image: node
     commands:
       - node -v
-      - echo $TEST
+      - echo kokoriko
